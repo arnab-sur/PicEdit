@@ -18,9 +18,13 @@ body{
 
 .container{
   width: 70em;
-  /* padding: 30px 35px 35px; */
   padding: 2em 3em;
-  background: rgb(248, 240, 240);
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.4px);
+  -webkit-backdrop-filter: blur(11.4px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 2rem;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
@@ -38,8 +42,9 @@ body{
   margin-right: auto;
 }
 
-.container p{
+.container p, .title{
   text-align: center;
+  color: #ccc;
 }
 
 .container .wrapper{
@@ -113,30 +118,35 @@ body{
 .editor-panel .rotate{
   margin-top: 17px;
 }
+
 .editor-panel .rotate button{
   display: flex;
   align-items: center;
   justify-content: center;
   width: calc(100% / 4 - 3px);
 }
+
 .rotate .options button:nth-child(3),
 .rotate .options button:nth-child(4){
   font-size: 18px;
 }
+
 .rotate .options button:active{
   color: #fff;
   background: #292335;
   border-color: #261f36;
 }
+
 .wrapper .preview-img{
   flex-grow: 1;
   display: flex;
   overflow: hidden;
   margin-left: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
   align-items: center;
   justify-content: center;
 }
+
 .preview-img img{
   max-width: 500px;
   max-height: 335px;
@@ -144,6 +154,7 @@ body{
   height: 100%;
   object-fit: contain;
 }
+
 .controls button{
   padding: 11px 20px;
   font-size: 14px;
@@ -157,13 +168,13 @@ body{
 }
 
 .controls .reset-filter{
-  color: #2c363f;
-  border: 1px solid #6C757D;
+  color: #ccc;
+  border: 1px solid #b9cfe0;
 }
 
 .controls .reset-filter:hover{
   color: #fff;
-  background: #565e64;
+  background: #35434e;
 }
 
 .controls .row{
@@ -210,9 +221,11 @@ body{
   .container .wrapper{
     flex-wrap: wrap-reverse;
   }
+
   .wrapper .editor-panel{
     width: 100%;
   }
+
   .wrapper .preview-img{
     width: 100%;
     margin: 0 0 15px;
@@ -234,9 +247,11 @@ body{
     width: 100%;
     margin-bottom: 10px;
   }
+
   .controls .row{
     width: 100%;
   }
+
   .controls .row .save-img{
     margin-left: 0px;
   }

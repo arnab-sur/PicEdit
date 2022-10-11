@@ -107,7 +107,7 @@ const saveImage = () => {
     ctx.drawImage(previewImg, -canvas.width / 2, -canvas.height / 2, canvas.width, canvas.height);
     
     const link = document.createElement("a");
-    link.download = "Edited_image.jpg";
+    link.download = "Edited_Image.png";
     link.href = canvas.toDataURL();
     link.click();
 }
